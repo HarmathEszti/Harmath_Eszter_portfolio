@@ -1,0 +1,402 @@
+@import "color.less";
+
+body {
+    background-color: @lightpink;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+div#content{
+  width: 100%;
+}
+div.nev{
+  font-family: arial;
+  text-align: center;
+  margin-left: 10px;
+  }
+  
+  div.middle {
+      position: absolute;
+      top: 120px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      overflow: auto;
+  }
+  
+  div.main {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+  }
+  
+  div.menu {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 150px;
+      margin: 0px 10px 10px;
+      box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+      border-top: 3px solid 2F4858;
+  
+  }
+  
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-strech {
+    align-items: strech;
+}
+
+div.head {
+    background-color: @darkpink;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 120px;
+}
+
+img.menu-logo{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    block-size: 20%;
+}
+
+img.nev{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    block-size: 20%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+
+// div.footer {
+//     background-color: @darkpink;
+//     position: absolute;
+//     width: 100%;
+//     height: 60px;
+// }
+
+
+.btn-fooldal,
+.btn-bemutatkozas,
+.btn-kontakt,
+.btn-portfolio,
+.btn-hogyankeszult {
+    cursor: pointer;
+}
+
+/*menu*/
+
+body {
+    margin: 0;
+  }
+  
+  .menusor {
+    position: relative;
+    overflow: hidden;
+    z-index:100;
+    display:flex;
+    justify-content: center;
+  }
+  
+  .menusor div {
+    float: left;
+    display: block;
+    color: @black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 20px;
+    white-space: nowrap;
+  }
+
+  .menusor div:first-child{
+    display: none;
+  }
+  
+  .menusor div:not(:first-child):hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .menusor div.active {
+    font-weight:bold;
+  }
+  
+  .menusor .icon {
+    display: none;
+  }
+
+  .menusor .selected-item{
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    .menusor {display: block;}
+    .menusor div {
+      display: none;
+      text-align: left;
+    }
+    .menusor div:first-child {display:block;}
+    .menusor div.icon {
+      position: absolute;
+      right: 0px;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    .menusor.responsive {
+      display: block;
+      background-color: @white;
+    }
+    .menusor.responsive {
+      padding-bottom: 0px;
+    }
+
+    .menusor.responsive {position: relative;}
+    .menusor.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    .menusor.responsive div {
+      float: none;
+      display: block;
+      text-align: left;
+      top: 0px;
+      position: relative;
+      padding: 10px 16px;
+    }
+
+    .menusor.responsive .selected-item{
+      display: none;
+    }
+  }
+
+  //főoldal
+
+  div.fooldal{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: minmax(1rem, 1fr) max-content minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(280px, 800px) minmax(1rem, 1fr);
+  }
+div.fooldal-tartalom{
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+  img#nevem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    margin-top: 50px;
+  }
+  div.nyito-kepek{
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%
+  }
+
+  img.nyito-kep-1{
+    width: 23%;
+    transform: rotate(30deg);
+    margin: 10px;
+  }
+
+  img.nyito-kep-2{
+    width: 30%;
+    margin: -10px 10px;
+  }
+ 
+  img.nyito-kep-3{
+    width: 25%;
+    transform: rotate(-20deg);
+    margin: 10px;
+  }
+
+  //contact
+
+  div#elerhetoseg{
+    position: absolute;
+    font-size: 24pt;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+  }
+  div#instagram{
+    position: absolute;
+    font-size: 18pt;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+  }
+  div#email{
+    position: absolute;
+    font-size: 18pt;
+    width: 100%;
+    top: 55%;
+    text-align: center;
+  }
+
+  //introduction
+
+  div.rolam-keret{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8%;
+  }
+
+  div#rolam-kep{
+    border: 1px solid @black;
+  }
+
+  img#rolam-kep{
+    width: 250px;
+    margin: 50px;
+  }
+
+  div.bemutatkozas-keret{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  div#bemutatkozas-szoveg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: justify;
+  }
+
+// kapcsolat
+
+div.kapcsolat-keret{
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+//portfolio
+
+div.muszaki-rajzok{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  grid-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+img.mr{
+  width: 200px;
+}
+
+
+div#cim1{
+  font-size: 26pt;
+  margin: 20px;
+}
+
+div.akvarell-rajzok{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  grid-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+img.ar{
+  width: 200px;
+}
+div#cim2{
+  font-size: 26pt;
+  margin: 20px;
+}
+
+//howtodo
+
+div.kinezet{
+margin: 3%;
+}
+div#kinezet-szoveg-cim{
+margin: 10px;
+font-size: 2rem;
+}
+div#kinezet-szoveg{
+  margin: 1%;
+}
+
+div.terv-elrendezes{
+margin: 3%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+div.terv-doboz{
+  display: block;
+  text-align: center;
+}
+div img.terv{
+margin: 2%;
+max-height: 250px;
+// width: 100%;
+}
+
+div.programozas{
+margin: 3%;
+}
+div#programozas-szoveg-cim{
+  font-size: 2rem;
+  margin: 10px;
+}
+div#programozas-szoveg{
+  margin: 1%;
+}
+
+div.jovo{
+margin: 3%;
+}
+div#jovo-szoveg-cim{
+  font-size: 2rem;
+  margin: 10px;
+}
+div#jovo-szoveg{
+margin: 1%;
+}
